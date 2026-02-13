@@ -25,10 +25,10 @@ public class Viaggio {
     private String stato;
 
 
-    public Viaggio(String destinazione, LocalDate dataDiPartenza, String stato) {
+    public Viaggio(String destinazione, LocalDate dataDiPartenza) {
         this.destinazione = destinazione;
         this.dataDiPartenza = dataDiPartenza;
-        this.stato = stato;
+        this.stato = "in programma";
     }
 
 }

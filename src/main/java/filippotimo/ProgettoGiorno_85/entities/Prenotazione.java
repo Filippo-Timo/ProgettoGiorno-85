@@ -31,10 +31,10 @@ public class Prenotazione {
     private String note;
 
 
-    public Prenotazione(Dipendente dipendente, Viaggio viaggio, LocalDate dataDiRichiesta, String note) {
+    public Prenotazione(Dipendente dipendente, Viaggio viaggio, String note) {
         this.dipendente = dipendente;
         this.viaggio = viaggio;
-        this.dataDiRichiesta = dataDiRichiesta;
+        this.dataDiRichiesta = LocalDate.now();
         this.note = note;
     }
 

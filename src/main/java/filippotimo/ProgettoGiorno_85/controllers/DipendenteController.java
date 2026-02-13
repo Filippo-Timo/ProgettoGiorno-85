@@ -66,7 +66,7 @@ public class DipendenteController {
         return this.dipendenteService.findByIdAndUpdateDipendente(dipendenteId, dipendenteDTO);
     }
 
-    // 5. DELETE /authors/123 -> Cancella lo specifico autore (void)
+    // 5. DELETE /dipendenti/123 -> Cancella lo specifico dipendente
 
     @DeleteMapping("/{dipendenteId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)

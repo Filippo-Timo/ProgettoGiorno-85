@@ -52,7 +52,7 @@ public class PrenotazioneService {
     public Prenotazione savePrenotazione(PrenotazioneDTO prenotazioneDTO) {
 
         Dipendente dipendente = dipendentiRepository.findById(prenotazioneDTO.dipendenteId()).orElseThrow(() -> new NotFoundException(prenotazioneDTO.dipendenteId()));
-        Viaggio viaggio = viaggiRepository.findById(prenotazioneDTO.viaggioId()).orElseThrow(() -> new NotFoundException(prenotazioneDTO.dipendenteId()));
+        Viaggio viaggio = viaggiRepository.findById(prenotazioneDTO.viaggioId()).orElseThrow(() -> new NotFoundException(prenotazioneDTO.viaggioId()));
 
         if (prenotazioniRepository.existsByDipendenteIdAndViaggioDataDiPartenza(dipendente.getId(), viaggio.getDataDiPartenza()))
             throw new BadRequestException("Esiste già un viaggio programmato per questo utente in questa data");

@@ -8,7 +8,7 @@ public record PrenotazioneDTO(
         Long dipendenteId,
         @NotNull(message = "L'ID del viaggio è obbligatorio")
         Long viaggioId,
-        @Size(min = 2, max = 50, message = "Il nome deve contenere tra i 2 e i 30 caratteri")
+        @Size(min = 2, max = 50, message = "Il nome deve contenere tra i 2 e i 50 caratteri")
         String note
 ) {
 }

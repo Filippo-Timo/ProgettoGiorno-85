@@ -46,7 +46,7 @@ public class ViaggioController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public Viaggio createDipendente(@RequestBody @Validated ViaggioDTO viaggioDTO, BindingResult validationResult) {
+    public Viaggio createViaggio(@RequestBody @Validated ViaggioDTO viaggioDTO, BindingResult validationResult) {
         if (validationResult.hasErrors()) {
             List<String> errorsList = validationResult.getFieldErrors()
                     .stream()
@@ -77,7 +77,7 @@ public class ViaggioController {
 
     @DeleteMapping("/{viaggioId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void findDipendenteByIdAndDelete(@PathVariable Long viaggioId) {
+    public void findViaggioByIdAndDelete(@PathVariable Long viaggioId) {
         this.viaggioService.findByIdAdDeleteViaggio(viaggioId);
     }
 

@@ -58,11 +58,11 @@ public class PrenotazioneController {
         }
     }
 
-    // 5. DELETE /prenotazioni/123 -> Cancella lo specifico viaggio
+    // 5. DELETE /prenotazioni/123 -> Cancella la specifica prenotazione
 
     @DeleteMapping("/{prenotazioneId}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void findDipendenteByIdAndDelete(@PathVariable Long prenotazioneId) {
+    public void findPrenotazioneByIdAndDelete(@PathVariable Long prenotazioneId) {
         this.prenotazioneService.findByIdAdDeletePrenotazione(prenotazioneId);
     }
 

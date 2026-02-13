@@ -74,7 +74,7 @@ public class DipendenteController {
         this.dipendenteService.findByIdAdDeleteDipendente(dipendenteId);
     }
 
-    // 6. PATCH /123/avatar -> Modifica l'avatar dell'autore in particolare
+    // 6. PATCH /123/avatar -> Modifica l'avatar dell'dipendente in particolare
 
     @PatchMapping("/{dipendenteId}/avatar")
     public Dipendente uploadImage(@RequestParam("profile_picture") MultipartFile file, @PathVariable Long dipendenteId) {
